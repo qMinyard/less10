@@ -1,0 +1,192 @@
+@font-face {
+    font-family: "NinjaStrike";
+    src: url("/china/assets/fonts/NinjaStrike.otf");
+}
+
+* {
+    /*Resetting default styles*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /*Configuring the font for all elements*/
+    font-family: NinjaStrike;
+    color: #F3C43E;
+    text-shadow: 3px 3px 3px #000;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #9F0102;
+}
+
+header {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.lantern {
+    width: 20%;
+    position: fixed;
+    top: 10px;
+    animation: float 8s ease-in-out infinite;
+}
+
+.lantern.left {
+    left: 0;
+}
+
+.lantern.right {
+    right: -1rem;
+}   
+
+@keyframes float {
+	0% {
+		transform: translatey(0);
+	}
+	50% {
+		transform: translatey(-1rem);
+	}
+	100% {
+		transform: translatey(0);
+	}
+}
+
+/*-----------MAIN BLOCK----------*/
+
+main {
+    display: flex;
+    margin-bottom: 2.5rem;
+}
+
+.house {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 0 1.5rem;
+}
+
+.roof {
+    width: 100%;
+    display: block;
+}
+
+.block {
+    flex: 1;
+    border: 5px solid #000;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 3rem;
+    margin: 0 3rem;
+}
+
+.window {
+    border: inherit; /*will be the same as .block border*/
+    background-color: #9F0102;
+    height: 100%;
+    text-align: center;
+    padding: 1rem;
+}
+
+.window h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.window img {
+    width: 50%;
+    border-radius: 1rem;
+}
+
+.window ul {
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+.order h2 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+#order-form {
+    margin: 0 auto;
+    width: 18rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 0 2rem;
+    font-size: 2rem;
+}
+
+#order-form label {
+    font-family: initial;
+    font-weight: bold;
+}
+
+#order-form input {
+    border: none;
+    background-color: navajowhite;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    outline: none;
+    margin: 0.5rem -0.2rem;
+    font-size: 1.2rem;
+    font-family: initial;
+    text-shadow: initial;
+    color: initial;
+}
+
+#submit {
+  align-self: center;
+  cursor: pointer;
+  margin-top: 1rem;
+  padding: 1rem 2.5rem;
+  border-radius: 1.5rem;
+  font-weight: bold;
+}
+
+#submit:hover {
+  box-shadow: 0 0 1rem red;
+}
+
+@media only screen and (max-width: 1020px) {
+  
+    main {
+        flex-direction: column;
+    }
+
+    .block {
+        padding: 1rem;
+        border: 3px solid #000;
+        font-size: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+}
+
+#order-table {
+    margin-bottom: 2rem;
+}
+
+#order-table th:first-child {
+    border-top-left-radius: 1rem;
+}
+
+#order-table th:last-child {
+    border-top-right-radius: 1rem;
+}
+
+#order-table th {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    background-color: #068b76;
+    font-family: initial;
+    font-weight: bold;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+}
+
+#order-table td{
+    border: 3px solid #068b76;
+    font-family: initial;
+    font-weight: bold;
+    padding: 0.5rem;
+}

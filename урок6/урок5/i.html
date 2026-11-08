@@ -1,0 +1,145 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./s.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./j.js" defer></script>
+</head>
+<body>
+    <main>
+    <nav>
+        <form id="sortForm">
+            <h4>Sort by:</h4>
+            <label for="name">Name:</label>
+            <input type="radio" name="sort" id="name" value="name">
+
+            <h4>Sort by:</h4>
+            <label for="name">ID:</label>
+            <input type="radio" name="sort" id="id" value="id">
+
+            <h4>Order:</h4>
+            <label for="upsc">from smallest to biggest:</label>
+            <input type="radio" name="order" id="upsc">
+        </form>
+        <form id="filter-form">
+                        <h4>Filter by:</h4>
+            <div class="search">
+                <label for="name-filter">Name:</label>
+                <input type="text" name="name-filter" id="name-filter">
+            </div>
+            <input type="submit" value="Apply filters" class="btn">
+        </form>
+
+    </nav>
+    <div id="results">
+
+    </div>
+</main>
+
+    <footer>by qMinyard</footer>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="./s.css">
+    <script src="./j.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <h1>Pokédex</h1>
+        <p>Find your Pokémon!</p>
+    </header>
+
+    <main>
+        <nav class="controls">
+            <form id="sortForm" class="control-card">
+                <h2>Sort By</h2>
+
+                <fieldset>
+                    <legend>Sort by:</legend>
+                    <label>
+                        <input type="radio" name="sort" value="name" checked>
+                        Name
+                    </label>
+                    <label>
+                        <input type="radio" name="sort" value="id">
+                        ID
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Order:</legend>
+                    <label>
+                        <input type="radio" name="order" value="asc" checked>
+                        Ascending
+                    </label>
+                    <label>
+                        <input type="radio" name="order" value="desc">
+                        Descending
+                    </label>
+                </fieldset>
+            </form>
+
+            <form id="filter-form" class="control-card">
+                <h2>Filter By</h2>
+
+                <label for="name-filter">Name:</label>
+                <input
+                    type="text"
+                    id="name-filter"
+                    name="name-filter"
+                    placeholder="e.g. pikachu"
+                    autocomplete="off"
+                >
+
+                <div class="filter-buttons">
+                    <button type="submit" class="btn">Apply Filters</button>
+                    <button type="reset" class="btn btn-secondary">Reset</button>
+                </div>
+
+                <div class="hp-ranges">
+                    <label for="hp-min">HP from:</label>
+                    <input type="range" name="hp-min" id="hp-min" min="0" max="255" value="0">
+
+                    <label for="hp-max">HP to:</label>
+                    <input type="range" name="hp-max" id="hp-max" min="0" max="255" value="255">
+                </div>
+
+                <div class="attack-ranges">
+                    <label for="attack-min">Attack from:</label>
+                    <input type="range" name="attack-min" id="attack-min" min="0" max="255" value="0">
+
+                    <label for="attack-max">Attack to:</label>
+                    <input type="range" name="attack-max" id="attack-max" min="0" max="255" value="255">
+                </div>
+
+                <div class="defense-ranges">
+                    <label for="defense-min">Defense from:</label>
+                    <input type="range" name="defense-min" id="defense-min" min="0" max="255" value="0">
+
+                    <label for="defense-max">Defense to:</label>
+                    <input type="range" name="defense-max" id="defense-max" min="0" max="255" value="255">
+                </div>
+            </form>
+        </nav>
+
+        <p id="status" class="status" role="status">Loading Pokémon...</p>
+
+        <section id="results" class="results" aria-label="Pokémon list"></section>
+    </main>
+
+    <footer>
+        <p>Pokédex · by qMinyard</p>
+    </footer>
+</body>
+</html>
